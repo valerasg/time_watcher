@@ -17,7 +17,7 @@ int obtenerDistancia() {
     delayMicroseconds(10);
     digitalWrite(TRIG_PIN, LOW);
 
-    long duracion = pulseIn(ECHO_PIN, HIGH, 30000); // Timeout de 30ms
+    long duracion = pulseIn(ECHO_PIN, HIGH, 10000); // Timeout de 10ms (aprox 1.7m)
     if (duracion == 0) return 999; // Sin lectura
     
     return duracion * 0.034 / 2;

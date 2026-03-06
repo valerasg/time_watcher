@@ -63,8 +63,16 @@ void gestionarActividad() {
     }
 }
 
+unsigned long sensorTimer = 0;
+const unsigned long SENSOR_INTERVAL = 100; // Leer sensor cada 100ms
+
 void loop() {
     gestionarReset();
-    gestionarActividad();
+    
+    if (millis() - sensorTimer >= SENSOR_INTERVAL) {
+        gestionarActividad();
+        sensorTimer = millis();
+    }
+    
     actualizarDisplay();
 }
