@@ -1,0 +1,39 @@
+# --- Arduino IDE / CLI ---
+# Compiled binaries
+*.hex
+*.elf
+*.bin
+*.zip
+
+# Build directories
+build/
+bin/
+out/
+
+# Arduino CLI generated files
+sketch.json
+arduino.cli.config.yml
+
+# --- VS Code (Arduino Extension) ---
+.vscode/arduino.json
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/settings.json
+.vscode/ipch/
+__vm/
+*.vsarduino.h
+
+# --- PlatformIO ---
+.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+fpga/
+
+# --- General / OS ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.history/
